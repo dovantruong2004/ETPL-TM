@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="asset/css/reset.css" />
+    <link rel="stylesheet" href="asset/css/main.css" />
+    <link rel="stylesheet" href="asset/fonts/Poppins/stylesheet.css" />
+    <title>ETPL-TM</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="side-bar">
+        <div class="logo">
+          <img src="asset/image/Logomark.svg" alt="Logo" />
+          <p class="brand">ETPL-TM</p>
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <div onclick="handleClick(this, 'overview')">
+                <img src="asset/image/category-2.svg" alt="" />
+                <p>Overview</p>
+              </div>
+            </li>
+            <li>
+              <div onclick="handleClick(this, 'task')">
+                <img src="asset/image/book.svg" alt="" />
+                <p>Task</p>
+              </div>
+            </li>
+            <li>
+              <div onclick="handleClick(this, 'your-team')">
+                <img src="asset/image/user-octagon.svg" alt="" />
+                <p>Your team</p>
+              </div>
+            </li>
+            <li>
+              <div onclick="handleClick(this, 'message')">
+                <img src="asset/image/message.svg" alt="" />
+                <p>Message</p>
+              </div>
+            </li>
+            <li>
+              <div onclick="handleClick(this, 'setting')">
+                <img src="asset/image/setting-2.svg" alt="" />
+                <p>Setting</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header">
+        <div class="header-left">
+          <div class="header-top">
+            <div class="title">
+              <h1 class="username">Do Van Truong</h1>
+              <p class="desc">Let's finish task today</p>
+            </div>
+            <div class="information">
+              <div class="message">
+                <img src="asset/image/notif.svg" alt="notify" />
+              </div>
+              <div class="avatar">
+                <img src="asset/image/Avatar.png" alt="avatar" />
+              </div>
+            </div>
+          </div>
+          <div class="header-menu">
+            <ul>
+              <li class="menu-item"><a href="#">Approved</a></li>
+              <li class="menu-item"><a href="#">Pending</a></li>
+              <li class="menu-item"><a href="#">Completed</a></li>
+              <li class="menu-item"><a href="#">Assigned Task's</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="calendar">
+          <div class="calendar-header">
+            <div class="calendar-nav">&lt;</div>
+            <h3 class="month-year">March 2025</h3>
+            <div class="calendar-nav">&gt;</div>
+          </div>
+          <div class="calendar-body">
+            <div class="calendar-weekdays">
+              <span>S</span><span>M</span><span>T</span><span>W</span
+              ><span>T</span><span>F</span><span>S</span>
+            </div>
+            <div class="calendar-days"></div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div id="overview" class="content active">
+          <div class="overview-container">
+            <div class="today-task">
+              <h3>Today Task's</h3>
+              <ul class="list-tasks">
+                <li class="task-item">
+                  <div class="task">
+                    <input type="checkbox" />
+                    <label for=""
+                      >Create a user flow of social application design</label
+                    >
+                  </div>
+                  <div class="progress-completed">Completed</div>
+                </li>
+                <li class="task-item">
+                  <div class="task">
+                    <input type="checkbox" />
+                    <label
+                      >Create a user flow of social application design</label
+                    >
+                  </div>
+                  <div class="progress-review">In review</div>
+                </li>
+                <li class="task-item">
+                  <div class="task">
+                    <input type="checkbox" />
+                    <label
+                      >Landing page design for Fintech project of
+                      singapore</label
+                    >
+                  </div>
+                  <div class="progress-review">In review</div>
+                </li>
+                <li class="task-item">
+                  <div class="task">
+                    <input type="checkbox" />
+                    <label>
+                      Interactive prototype for app screens of deltamine project
+                    </label>
+                  </div>
+                  <div class="progress-going">On going</div>
+                </li>
+                <li class="task-item">
+                  <div class="task">
+                    <input type="checkbox" />
+                    <label>
+                      Interactive prototype for app screens of deltamine project
+                    </label>
+                  </div>
+                  <div class="progress-completed">Completed</div>
+                </li>
+              </ul>
+            </div>
+            <div class="project-summary">
+              <div class="project-summary__header">
+                <h3>Project Summary</h3>
+                <div class="filter">
+                  <div class="project">
+                    <p>Project</p>
+                    <img src="asset/image/Icon (Stroke).svg" alt="" />
+                  </div>
+                  <div class="manager">
+                    <p>Project manager</p>
+                    <img src="asset/image/Icon (Stroke).svg" alt="" />
+                  </div>
+                  <div class="status">
+                    <p>Status</p>
+                    <img src="asset/image/Icon (Stroke).svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="project-summary__table">
+                <table>
+                  <thead>
+                    <th>Name</th>
+                    <th>Project manager</th>
+                    <th>Due date</th>
+                    <th>Status</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Web page Design</td>
+                      <td>Kiran kan</td>
+                      <td>May 25, 2024</td>
+                      <td><div class="status-approved">Approved</div></td>
+                    </tr>
+                    <tr>
+                      <td>Uolyft AI app</td>
+                      <td>Neelesh kumar</td>
+                      <td>Jun 20, 2024</td>
+                      <td><div class="status-delayed">Delayed</div></td>
+                    </tr>
+                    <tr>
+                      <td>Marketing and Branding</td>
+                      <td>Rakesh Kumar</td>
+                      <td>July 13, 2024</td>
+                      <td><div class="status-rework">Re-work</div></td>
+                    </tr>
+                    <tr>
+                      <td>App development</td>
+                      <td>Shiva Gaami</td>
+                      <td>Dec 20, 2024</td>
+                      <td><div class="status-approved">Approved</div></td>
+                    </tr>
+                    <tr>
+                      <td>App UI</td>
+                      <td>Rathod.kuy</td>
+                      <td>Mar 15, 2024</td>
+                      <td><div class="status-going">On going</div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="data">
+              <div class="weekly-activity">
+                <div class="weekly-activity__header">
+                  <h2>Weakly Activity</h2>
+                  <img src="asset/image/Group 49.svg" alt="" />
+                </div>
+                <div class="weekly-activity__body">
+                  <h2>80%</h2>
+                  <div class="icon">
+                    <img src="asset/image/Group 48.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="total-task-completed">
+                <div class="total-task-completed__header">
+                  <h2>Total tasks Completed</h2>
+                  <img src="asset/image/Group 49.svg" alt="" />
+                </div>
+                <div class="total-task-completed__body">
+                  <h2>40</h2>
+                  <div class="icon">
+                    <img src="asset/image/Group 48.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="project-worked">
+                <div class="project-worked__header">
+                  <h2>Project Worked</h2>
+                  <img src="asset/image/Group 49.svg" alt="" />
+                </div>
+                <div class="project-worked__body">
+                  <h2>105</h2>
+                  <div class="icon">
+                    <img src="asset/image/Group 48.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="task" class="content">
+          <div class="task-container">
+            <div class="task-header">
+              <div class="search-task">
+                <input type="search" name="" id="" placeholder="Search task" />
+              </div>
+              <div class="action-task">
+                <div class="progress-completed">Completed</div>
+                <div class="status-rework">Re-work</div>
+                <div class="status-pending">Pending</div>
+              </div>
+            </div>
+            <div class="task-view">
+              <div>
+                <h3>All Task</h3>
+                <a href="task/create-task.html">Create task</a>
+              </div>
+              <div>
+                <table>
+                  <thead>
+                    <th><input type="checkbox" class="check-box" id="sellect-all"/></th>
+                    <th>Task name</th>
+                    <th>Task created</th>
+                    <th>Duo created</th>
+                    <th>Last activity</th>
+                    <th></th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" class="check-box item-check" /></td>
+                      <td>Tech requirements.pdf</td>
+                      <td>Jan 4, 2024</td>
+                      <td>Jan 4, 2024</td>
+                      <td>Jan 4, 2024</td>
+                      <td class="dots">⋮</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="check-box item-check" /></td>
+                      <td>Dashboard screenshot.jpg</td>
+                      <td>Jan 4, 2024</td>
+                      <td>Jan 4, 2024</td>
+                      <td>Jan 4, 2024</td>
+                      <td class="dots">⋮</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="check-box item-check" /></td>
+                      <td>Dashboard prototye recording.mp4</td>
+                      <td>Jan 4, 2024</td>
+                      <td>Jan 2, 2024</td>
+                      <td>Jan 2, 2024</td>
+                      <td class="dots">⋮</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="check-box item-check" /></td>
+                      <td>Dashboard prototye FINAL.fig</td>
+                      <td>Jan 4, 2024</td>
+                      <td>Jan 6, 2024</td>
+                      <td>Jan 6, 2024</td>
+                      <td class="dots">⋮</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="check-box item-check" /></td>
+                      <td>Dashboard interaction.framerx</td>
+                      <td>Jan 4, 2024</td>
+                      <td>Jan 6, 2024</td>
+                      <td>Jan 6, 2024</td>
+                      <td class="dots">⋮</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="check-box item-check" /></td>
+                      <td>App inspiration.png</td>
+                      <td>Jan 4, 2024</td>
+                      <td>Jan 4, 2024</td>
+                      <td>Jan 4, 2024</td>
+                      <td class="dots">⋮</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <input type="submit" class="submit" value="Submit for Approval" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="your-team" class="content">
+          <h2>Your team</h2>
+        </div>
+        <div id="message" class="content">
+          <h2>Message</h2>
+        </div>
+        <div id="setting" class="content">
+          <h2>Setting</h2>
+        </div>
+      </div>
+    </div>
+    <script>
+      function handleClick(element, contentId) {
+        // Xóa class "active" khỏi tất cả các thẻ li trong menu
+        document.querySelectorAll(".side-bar .menu ul li").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // Thêm class "active" vào thẻ li chứa phần tử được click
+        element.parentElement.classList.add("active");
+
+        // Gọi hàm hiển thị nội dung
+        showContent(contentId);
+      }
+
+      function showContent(id) {
+        // Ẩn tất cả nội dung
+        document.querySelectorAll(".content").forEach((div) => {
+          div.classList.remove("active");
+        });
+
+        // Hiển thị nội dung được chọn
+        document.getElementById(id).classList.add("active");
+      }
+    </script>
+    <script src="asset/js/script.js"></script>
+  </body>
+</html>

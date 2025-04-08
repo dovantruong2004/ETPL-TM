@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="asset/css/reset.css" />
+    <link rel="stylesheet" href="asset/css/login.css" />
+    <link rel="stylesheet" href="asset/fonts/Poppins/stylesheet.css">
+    <title>ETPL-TM</title>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="asset/image/Logomark.svg" alt="Logo">
+      <p class="brand">ETPL-TM</p>
+    </div>
+    <div class="container">
+      <div class="form__container">
+        <h2 class="form__container--sub-title">Welcome !</h2>
+        <h1 class="form__container--title">Log in to</h1>
+        <p class="form_container--desc">Continue</p>
+        <form action="" class="form__container--form-login">
+          <div class="username__container">
+            <label for="username">User name or ID</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your user name or ID"
+            />
+          </div>
+
+          <div class="form__container--form__container--block-password">
+            <label for="password">Password</label>
+            <div class="password__container">
+              <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+            />
+            <span class="toggle-password"
+              ><img src="asset/image/invisible 1.png" alt=""
+            /></span>
+            </div>
+          </div>
+          <div class="remember-forgot">
+            <div class="remember__container">
+              <input type="checkbox" name="remember" id="remember" />
+              <label for="remember">Remember me</label>
+            </div>
+            <a href="#">Forgot Password ?</a>
+          </div>
+          <button type="submit" class="login-btn">Login</button>
+          <div class="register-text">
+            <p>Don’t have an Account ? </p><a href="#">Register</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="asset/js/action.js"></script>
+  </body>
+</html>

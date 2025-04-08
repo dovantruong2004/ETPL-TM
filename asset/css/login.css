@@ -1,0 +1,186 @@
+
+body {
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins';
+    background: #FFFAFA;
+    overflow: hidden;
+}
+
+/* Login Page */
+
+.logo{
+    display: flex;
+    position: absolute;
+    top: 31px;
+    left: 42px;
+    align-items: center;
+}
+.logo .brand{
+    margin-left: 12px;
+    color: #5577FF;
+    font-size: 32px;
+    font-weight: 500;
+}
+.form__container{
+    width: 505px;
+    
+    box-sizing: border-box;
+    
+    padding: 36px 40px 47px 35px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form__container--sub-title{
+    font-size: 25px;
+    font-weight: 400;
+}
+.form__container--title{
+    margin-top: 29px;
+    font-size: 31px;
+    font-weight: 500;
+}
+.form_container--desc{
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.form__container--form-login{
+    margin-top: 48px;
+}
+label{
+    display: block;
+}
+
+input::placeholder{
+    color: #ABABAB;
+    font-size: 14px;
+    font-weight: lighter;
+}
+.username__container input{
+    margin-top: 9px;
+    width: 423px;
+    padding: 19px 27px;
+    border:1px solid #D0D5DD;
+    border-radius: 10px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 14px;
+}
+.form__container--form__container--block-password{
+    margin-top: 38px;
+}
+.password__container {
+    margin-top: 9px;
+    position: relative; /* Cần thiết để định vị icon */
+    width: 423px; /* Hoặc kích thước bạn muốn */
+    height: 59px;
+    border:1px solid #D0D5DD;
+    border-radius: 10px;
+    box-sizing: border-box;
+    outline: none;
+    display: flex; /* Sử dụng flexbox để căn chỉnh icon */
+    align-items: center; /* Căn theo chiều dọc */
+     /* Thêm padding cho input và icon */
+    padding: 19px 27px;
+}
+
+.password__container input {
+    width: 100%; /* Input chiếm toàn bộ chiều rộng */
+    border: none; /* Loại bỏ border mặc định của input */
+    outline: none;
+    padding-right: 35px; /* Tạo khoảng trống bên phải cho icon */
+    background: transparent; /* Trong suốt để nhìn thấy border của container */
+    
+}
+
+.password__container input::placeholder{
+    color: #ABABAB;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px; /* Vị trí icon bên phải */
+    cursor: pointer; /* Con trỏ chuột hình bàn tay */
+}
+
+.toggle-password img {
+    width: 20px; /* Kích thước icon */
+    height: 20px;
+}
+.remember-forgot{
+    margin-top: 23px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+.remember__container{
+    display: flex;
+    align-items: center;
+}
+.remember__container input{
+    width: 15px;
+    height: 15px;
+    appearance: none;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+.remember__container input:checked {
+    background-color: #000;
+    border-color: #000;
+}
+
+.remember__container input:checked::after {
+    content: "✔"; /* Dấu tích */
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.remember-forgot a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #5577FF;
+}
+.login-btn{
+    padding: 16px 190px;
+    margin-top: 38px;
+    width: 423px;
+    height: 57px;
+    border: none;
+    border-radius: 6px;
+    background: #5577FF;
+    color:#fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+.register-text{
+    display: flex;
+    margin-top: 56px;
+    align-items: center;
+    justify-content: center;
+}
+.register-text p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #ABABAB;
+}
+.register-text a{
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #5577FF;
+    text-decoration: none;
+}
