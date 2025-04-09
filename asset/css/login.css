@@ -140,7 +140,7 @@ input::placeholder{
 }
 
 .remember__container input:checked::after {
-    content: "✔"; /* Dấu tích */
+    content: ""; /* Dấu tích */
     color: #fff;
     font-size: 16px;
     position: absolute;
