@@ -514,14 +514,17 @@ body {
   padding: 30px;
   border-radius: 26px;
 }
-.task-container {
+
+/* Task */
+
+.task {
   padding: 50px 32px 47px 32px;
 }
-.task-container .task-header {
+.task__header {
   display: flex;
   justify-content: space-between;
 }
-.task-container .task-header .search-task input {
+.task__header .search-task input {
   width: 420px;
   height: 52px;
   padding: 14px 20px;
@@ -529,16 +532,16 @@ body {
   border-radius: 10px;
   outline: none;
 }
-.task-container .task-header .search-task input::placeholder {
+.task__header .search-task input::placeholder {
   color: #54577a;
   font-size: 14px;
   font-weight: bold;
 }
-.task-container .action-task {
+.task__header .action-task {
   display: flex;
   align-items: center;
 }
-.task-container .action-task .progress-completed {
+.task__header .action-task .progress-completed {
   border-radius: 20px;
   background: #e2f9ed;
   font-size: 12px;
@@ -546,7 +549,7 @@ body {
   text-align: center;
   padding: 5px 25px;
 }
-.task-container .action-task .status-rework {
+.task__header .action-task .status-rework {
   margin-left: 15px;
   border-radius: 20px;
   background: #ffe2e8;
@@ -555,7 +558,7 @@ body {
   text-align: center;
   padding: 5px 25px;
 }
-.task-container .action-task .status-pending {
+.task__header .action-task .status-pending {
   margin-left: 15px;
   border-radius: 20px;
   background: #fff7e2;
@@ -564,16 +567,17 @@ body {
   text-align: center;
   padding: 5px 25px;
 }
-.task-container .task-view div:nth-child(1) {
+
+.task__view div:nth-child(1) {
   display: flex;
   margin-top: 25px;
   align-items: center;
 }
-.task-container .task-view div:nth-child(1) h3 {
+.task__view div:nth-child(1) h3 {
   font-size: 28px;
   font-weight: 600;
 }
-.task-container .task-view div:nth-child(1) a {
+.task__view div:nth-child(1) a {
   margin-left: 15px;
   background: #5577ff;
   color: #fff;
@@ -581,28 +585,31 @@ body {
   text-decoration: none;
   border-radius: 8px;
 }
-.task-container .task-view div:nth-child(2) {
+.task__view .task__view--table{
   margin-top: 40px;
 }
-.task-container .task-view div:nth-child(2) table {
+.task__view div:nth-child(2) table {
   width: 75vw;
 }
-.task-container .task-view div:nth-child(2) table thead {
+.task__view div:nth-child(2) table thead {
   border-bottom: 2px solid #e4e7ec;
   background-color: #f9fafb;
 }
-.task-container .task-view div:nth-child(2) table tbody tr {
+.task__view div:nth-child(2) table tbody tr {
   border-bottom: 2px solid #e4e7ec;
 }
-.task-container .task-view div:nth-child(2) table th {
+.task__view div:nth-child(2) table th {
   padding: 12px 16px;
   text-align: left;
 }
-.task-container .task-view div:nth-child(2) table td {
+.task__view div:nth-child(2) table td {
   padding: 26px 16px;
   text-align: left;
 }
-.task-container .task-view div:nth-child(2) table .check-box {
+.task__view div:nth-child(2) table .dots {
+  cursor: pointer;
+}
+.task__view div:nth-child(2) table .check-box {
   border-radius: 6px;
   width: 20px;
   height: 20px;
@@ -613,10 +620,10 @@ body {
   display: inline-block;
   position: relative;
 }
-.task-container .task-view div:nth-child(2) table .check-box:checked {
+.task__view div:nth-child(2) table .check-box:checked {
   background: #5577ff;
 }
-.task-container .task-view div:nth-child(2) table .check-box::before {
+.task__view div:nth-child(2) table .check-box::before {
   display: none;
   position: absolute;
   content: "✔";
@@ -625,10 +632,10 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.task-container .task-view div:nth-child(2) table .check-box:checked::before {
+.task__view div:nth-child(2) table .check-box:checked::before {
   display: block;
 }
-.task-container .task-view div:nth-child(2) .submit {
+.submit {
   margin-top: 40px;
   padding: 8px 19px;
   background: #5577ff;
@@ -639,6 +646,65 @@ body {
   font-weight: 500;
   cursor: pointer;
 }
+.task__view--detail{
+  display: none;
+  background: #fff;
+}
+.task__view--detail .desc {
+  width: 742px;
+  line-height: 1.5;
+  color: #667085; 
+  font-size: 16px;
+}
+input[type="file"] {
+  display: none; /* ẩn hoàn toàn */
+}
+
+.custom-file-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-left : 2px solid #E4E7EC;
+}
+
+.custom-file-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid #dce1e7;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #3c3f45;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.custom-file-label:hover {
+  border-color: #b7bdc6;
+  background-color: #f9f9f9;
+}
+
+.custom-file-label img {
+  width: 18px;
+  height: 18px;
+}
+
+.task__view--detail td{
+  border: 2px solid #D0D5DD;
+  padding: 16px;
+  font-size: 13px;
+  color: #444;
+}
+.task-detail-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Create */
+
 .form-create {
   margin-top: 26px;
 }

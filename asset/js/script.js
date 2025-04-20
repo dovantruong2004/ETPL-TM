@@ -73,3 +73,13 @@ document.getElementById("sellect-all").addEventListener('change', function () {
     check.checked = this.checked;
   });
 });
+
+document.querySelectorAll(".dots").forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    const detailRow = document.querySelectorAll(".task__view--detail")[index];
+    if (detailRow) {
+      detailRow.style.display =
+        detailRow.style.display === "table-row" ? "none" : "table-row";
+    }
+  });
+});
