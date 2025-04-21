@@ -10,244 +10,93 @@
   </head>
   <body>
     <div class="container">
-      <div class="side-bar">
-        <div class="logo">
+      <!-- Side bar -->
+      <aside class="sidebar">
+        <div class="sidebar_logo">
           <img src="../asset/image/Logomark.svg" alt="Logo" />
-          <p class="brand">ETPL-TM</p>
+          <p class="sidebar_logo--brand">ETPL-TM</p>
         </div>
-        <div class="menu">
+        <nav class="sidebar__nav">
           <ul>
             <li>
-              <div onclick="handleClick(this, 'overview')">
+              <div>
                 <img src="../asset/image/category-2.svg" alt="" />
-                <p>Overview</p>
+                <a href="../index.html">Overview</a>
               </div>
             </li>
             <li>
-              <div onclick="handleClick(this, 'task')">
+              <div class="sidebar__nav--active">
                 <img src="../asset/image/book.svg" alt="" />
-                <p>Task</p>
+                <a href="task/all-task.html">Task</a>
               </div>
             </li>
             <li>
-              <div onclick="handleClick(this, 'your-team')">
+              <div>
                 <img src="../asset/image/user-octagon.svg" alt="" />
-                <p>Your team</p>
+                <a href="task/all-task.html">Your team</a>
               </div>
             </li>
             <li>
-              <div onclick="handleClick(this, 'message')">
+              <div>
                 <img src="../asset/image/message.svg" alt="" />
-                <p>Message</p>
+                <a href="task/all-task.html">Message</a>
               </div>
             </li>
             <li>
-              <div onclick="handleClick(this, 'setting')">
+              <div>
                 <img src="../asset/image/setting-2.svg" alt="" />
-                <p>Setting</p>
+                <a href="task/all-task.html">Setting</a>
               </div>
             </li>
           </ul>
-        </div>
-      </div>
-      <div class="header">
-        <div class="header-left">
-          <div class="header-top">
-            <div class="title">
-              <h1 class="username">Do Van Truong</h1>
-              <p class="desc">Let's finish task today</p>
-            </div>
-            <div class="information">
-              <div class="message">
-                <img src="../asset/image/notif.svg" alt="notify" />
+        </nav>
+      </aside>
+      
+      <main class="main">
+        <!-- Header -->
+        <header class="header">
+          <div class="header__left">
+            <div class="header__left--top">
+              <div class="title">
+                <h1 class="title__username">Do Van Truong</h1>
+                <p class="title__desc">Let's finish task today</p>
               </div>
-              <div class="avatar">
-                <img src="../asset/image/Avatar.png" alt="avatar" />
+              <div class="information">
+                <div class="information__message">
+                  <img src="../asset/image/notif.svg" alt="notify" />
+                </div>
+                <div class="information__avatar">
+                  <img src="../asset/image/Avatar.png" alt="avatar" />
+                </div>
               </div>
             </div>
-          </div>
-          <div class="header-menu">
-            <ul>
-              <li class="menu-item"><a href="#">Approved</a></li>
-              <li class="menu-item"><a href="#">Pending</a></li>
-              <li class="menu-item"><a href="#">Completed</a></li>
-              <li class="menu-item"><a href="#">Assigned Task's</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="calendar">
-          <div class="calendar-header">
-            <div class="calendar-nav">&lt;</div>
-            <h3 class="month-year">March 2025</h3>
-            <div class="calendar-nav">&gt;</div>
-          </div>
-          <div class="calendar-body">
-            <div class="calendar-weekdays">
-              <span>S</span><span>M</span><span>T</span><span>W</span
-              ><span>T</span><span>F</span><span>S</span>
-            </div>
-            <div class="calendar-days"></div>
-          </div>
-        </div>
-      </div>
-      <div class="main">
-        <div id="overview" class="content active">
-          <div class="overview-container">
-            <div class="today-task">
-              <h3>Today Task's</h3>
-              <ul class="list-tasks">
-                <li class="task-item">
-                  <div class="task">
-                    <input type="checkbox" />
-                    <label for=""
-                      >Create a user flow of social application design</label
-                    >
-                  </div>
-                  <div class="progress-completed">Completed</div>
-                </li>
-                <li class="task-item">
-                  <div class="task">
-                    <input type="checkbox" />
-                    <label
-                      >Create a user flow of social application design</label
-                    >
-                  </div>
-                  <div class="progress-review">In review</div>
-                </li>
-                <li class="task-item">
-                  <div class="task">
-                    <input type="checkbox" />
-                    <label
-                      >Landing page design for Fintech project of
-                      singapore</label
-                    >
-                  </div>
-                  <div class="progress-review">In review</div>
-                </li>
-                <li class="task-item">
-                  <div class="task">
-                    <input type="checkbox" />
-                    <label>
-                      Interactive prototype for app screens of deltamine project
-                    </label>
-                  </div>
-                  <div class="progress-going">On going</div>
-                </li>
-                <li class="task-item">
-                  <div class="task">
-                    <input type="checkbox" />
-                    <label>
-                      Interactive prototype for app screens of deltamine project
-                    </label>
-                  </div>
-                  <div class="progress-completed">Completed</div>
-                </li>
+            <div class="header__left--menu menu">
+              <ul>
+                <li class="menu__item"><a href="#">Approved</a></li>
+                <li class="menu__item"><a href="#">Pending</a></li>
+                <li class="menu__item"><a href="#">Completed</a></li>
+                <li class="menu__item"><a href="#">Assigned Task's</a></li>
               </ul>
             </div>
-            <div class="project-summary">
-              <div class="project-summary__header">
-                <h3>Project Summary</h3>
-                <div class="filter">
-                  <div class="project">
-                    <p>Project</p>
-                    <img src="asset/image/Icon (Stroke).svg" alt="" />
-                  </div>
-                  <div class="manager">
-                    <p>Project manager</p>
-                    <img src="asset/image/Icon (Stroke).svg" alt="" />
-                  </div>
-                  <div class="status">
-                    <p>Status</p>
-                    <img src="asset/image/Icon (Stroke).svg" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div class="project-summary__table">
-                <table>
-                  <thead>
-                    <th>Name</th>
-                    <th>Project manager</th>
-                    <th>Due date</th>
-                    <th>Status</th>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Web page Design</td>
-                      <td>Kiran kan</td>
-                      <td>May 25, 2024</td>
-                      <td><div class="status-approved">Approved</div></td>
-                    </tr>
-                    <tr>
-                      <td>Uolyft AI app</td>
-                      <td>Neelesh kumar</td>
-                      <td>Jun 20, 2024</td>
-                      <td><div class="status-delayed">Delayed</div></td>
-                    </tr>
-                    <tr>
-                      <td>Marketing and Branding</td>
-                      <td>Rakesh Kumar</td>
-                      <td>July 13, 2024</td>
-                      <td><div class="status-rework">Re-work</div></td>
-                    </tr>
-                    <tr>
-                      <td>App development</td>
-                      <td>Shiva Gaami</td>
-                      <td>Dec 20, 2024</td>
-                      <td><div class="status-approved">Approved</div></td>
-                    </tr>
-                    <tr>
-                      <td>App UI</td>
-                      <td>Rathod.kuy</td>
-                      <td>Mar 15, 2024</td>
-                      <td><div class="status-going">On going</div></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+          </div>
+          <div class="header__calendar">
+            <div class="header__calendar--top">
+              <div class="calendar-nav">&lt;</div>
+              <h3 class="month-year">March 2025</h3>
+              <div class="calendar-nav">&gt;</div>
             </div>
-            <div class="data">
-              <div class="weekly-activity">
-                <div class="weekly-activity__header">
-                  <h2>Weakly Activity</h2>
-                  <img src="asset/image/Group 49.svg" alt="" />
-                </div>
-                <div class="weekly-activity__body">
-                  <h2>80%</h2>
-                  <div class="icon">
-                    <img src="asset/image/Group 48.svg" alt="" />
-                  </div>
-                </div>
+            <div class="header__calendar--body">
+              <div class="calendar-weekdays">
+                <span>S</span><span>M</span><span>T</span><span>W</span
+                ><span>T</span><span>F</span><span>S</span>
               </div>
-              <div class="total-task-completed">
-                <div class="total-task-completed__header">
-                  <h2>Total tasks Completed</h2>
-                  <img src="asset/image/Group 49.svg" alt="" />
-                </div>
-                <div class="total-task-completed__body">
-                  <h2>40</h2>
-                  <div class="icon">
-                    <img src="asset/image/Group 48.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div class="project-worked">
-                <div class="project-worked__header">
-                  <h2>Project Worked</h2>
-                  <img src="asset/image/Group 49.svg" alt="" />
-                </div>
-                <div class="project-worked__body">
-                  <h2>105</h2>
-                  <div class="icon">
-                    <img src="asset/image/Group 48.svg" alt="" />
-                  </div>
-                </div>
-              </div>
+              <div class="calendar-days"></div>
             </div>
           </div>
-        </div>
-        <div id="task" class="content">
-          <div class="task-container">
-            <div class="task-header">
+        </header>
+        <section class="task">
+          <div class="">
+            <div class="task__header">
               <div class="search-task">
                 <input type="search" name="" id="" placeholder="Search task" />
               </div>
@@ -312,17 +161,9 @@
               </div>
             </div>
           </div>
-        </div>
-        <div id="your-team" class="content">
-          <h2>Your team</h2>
-        </div>
-        <div id="message" class="content">
-          <h2>Message</h2>
-        </div>
-        <div id="setting" class="content">
-          <h2>Setting</h2>
-        </div>
-      </div>
+        </section>
+        
+      </main>
     </div>
     <script>
       function handleClick(element, contentId) {
@@ -348,6 +189,6 @@
         document.getElementById(id).classList.add("active");
       }
     </script>
-    <script src="/asset/js/script.js"></script>
+    <script src="../asset/js/script.js"></script>
   </body>
 </html>

@@ -406,6 +406,7 @@ body {
   color: #ff4d6d;
   text-align: center;
   padding: 5px 25px;
+  text-decoration: none;
 }
 .project-summary__table table tbody tr td .status-going {
   border-radius: 20px;
@@ -557,6 +558,7 @@ body {
   color: #ff4d6d;
   text-align: center;
   padding: 5px 25px;
+  text-decoration: none;
 }
 .task__header .action-task .status-pending {
   margin-left: 15px;
@@ -844,3 +846,6 @@ textarea::placeholder {
   background-color: #f8f9fa;
   cursor: pointer;
 }
+
+/* Re-work */
+
