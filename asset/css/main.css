@@ -879,7 +879,7 @@ textarea::placeholder {
 }
 .task__rework--table table td {
   padding: 26px 16px;
-  text-align: left;
+  text-align: center;
 }
 .task__rework--table table .dots {
   cursor: pointer;
@@ -909,4 +909,12 @@ textarea::placeholder {
 }
 .task__rework--table table .check-box:checked::before {
   display: block;
+}
+.task__view--detail .desc-rework {
+  width: 740px;
+  line-height: 1.5;
+  color: #667085; 
+  font-size: 16px;
+  border-right: 2px solid #E4E7EC;
+  outline: none;
 }
