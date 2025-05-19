@@ -710,7 +710,7 @@ input[type="file"] {
   align-items: center;
 }
 
-/* Create */
+/* Create task */
 
 .form-create {
   margin-top: 26px;
@@ -848,4 +848,65 @@ textarea::placeholder {
 }
 
 /* Re-work */
-
+.task__rework--title{
+  display: flex;
+  margin-top: 25px;
+  align-items: center;
+}
+.task__rework--title h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+.task__rework{
+  margin-top: 40px;
+}
+.task__rework--table{
+  margin-top: 40px;
+}
+.task__rework--table table thead {
+  border-bottom: 2px solid #e4e7ec;
+  background-color: #f9fafb;
+}
+.task__rework--table table tbody tr {
+  border-bottom: 2px solid #e4e7ec;
+}
+/* .task__rework--table table tbody .task-name{
+  
+} */
+.task__rework--table table th {
+  padding: 12px 16px;
+  text-align: left;
+}
+.task__rework--table table td {
+  padding: 26px 16px;
+  text-align: left;
+}
+.task__rework--table table .dots {
+  cursor: pointer;
+}
+.task__rework--table table .check-box {
+  border-radius: 6px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d0d5dd;
+  cursor: pointer;
+  background-color: #fff;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+}
+.task__rework--table table .check-box:checked {
+  background: #5577ff;
+}
+.task__rework--table table .check-box::before {
+  display: none;
+  position: absolute;
+  content: "✔";
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.task__rework--table table .check-box:checked::before {
+  display: block;
+}

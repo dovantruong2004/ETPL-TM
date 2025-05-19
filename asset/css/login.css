@@ -48,7 +48,7 @@ body {
 .form_container--desc{
     margin-top: 5px;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 500;
 }
 .form__container--form-login{
     margin-top: 48px;
@@ -165,6 +165,7 @@ input::placeholder{
     color:#fff;
     font-size: 16px;
     font-weight: 500;
+    cursor: pointer;
 }
 .register-text{
     display: flex;
