@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../asset/css/reset.css" />
+    <link rel="stylesheet" href="../../asset/css/main.css" />
+    <link rel="stylesheet" href="../../asset/fonts/Poppins/stylesheet.css" />
+    <title>ETPL-TM</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Side bar -->
+      <aside class="sidebar">
+        <div class="sidebar_logo">
+          <img src="../../asset/image/Logomark.svg" alt="Logo" />
+          <p class="sidebar_logo--brand">ETPL-TM</p>
+        </div>
+        <nav class="sidebar__nav">
+          <ul>
+            <li>
+              <div>
+                <img src="../../asset/image/category-2.svg" alt="" />
+                <a href="../index.html">Overview</a>
+              </div>
+            </li>
+            <li>
+              <div class="sidebar__nav--active">
+                <img src="../../asset/image/book.svg" alt="" />
+                <a href="task/all-task.html">Task</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="../../asset/image/user-octagon.svg" alt="" />
+                <a href="task/all-task.html">Your team</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="../../asset/image/message.svg" alt="" />
+                <a href="task/all-task.html">Message</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="../../asset/image/setting-2.svg" alt="" />
+                <a href="task/all-task.html">Setting</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <!-- Main -->
+      <main class="main">
+        <!-- Header -->
+        <header class="header">
+          <div class="header__left">
+            <div class="header__left--top">
+              <div class="title">
+                <h1 class="title__username">Do Van Truong</h1>
+                <p class="title__desc">Let's finish task today</p>
+              </div>
+              <div class="information">
+                <div class="information__message">
+                  <img src="../../asset/image/notif.svg" alt="notify" />
+                </div>
+                <div class="information__avatar">
+                  <img src="../../asset/image/Avatar.png" alt="avatar" />
+                </div>
+              </div>
+            </div>
+            <div class="header__left--menu menu">
+              <ul>
+                <li class="menu__item"><a href="#">Approved</a></li>
+                <li class="menu__item"><a href="#">Pending</a></li>
+                <li class="menu__item"><a href="#">Completed</a></li>
+                <li class="menu__item"><a href="#">Assigned Task's</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__calendar">
+            <div class="header__calendar--top">
+              <div class="calendar-nav">&lt;</div>
+              <h3 class="month-year">March 2025</h3>
+              <div class="calendar-nav">&gt;</div>
+            </div>
+            <div class="header__calendar--body">
+              <div class="calendar-weekdays">
+                <span>S</span><span>M</span><span>T</span><span>W</span
+                ><span>T</span><span>F</span><span>S</span>
+              </div>
+              <div class="calendar-days"></div>
+            </div>
+          </div>
+        </header>
+        <!-- Task -->
+        <section class="task">
+          <div class="task__header">
+            <div class="search-task">
+              <input type="search" name="" id="" placeholder="Search task" />
+            </div>
+            <div class="action-task">
+              <a href="approved.html" class="progress-approved">Completed</a>
+              <a href="pending.html" class="status-pending">Pending</a>
+            </div>
+          </div>
+          <div class="task__pending">
+            <div class="task__pending--title">
+              <h3>Pending task to Review</h3>
+            </div>
+            <div class="task__pending--table">
+              <table>
+                <thead>
+                  <th>
+                    <input type="checkbox" class="check-box" id="sellect-all" />
+                  </th>
+                  <th style="color: #FEB701;">Task name</th>
+                  <th>Task created</th>
+                  <th>Task by</th>
+                  <th>Status</th>
+                  <th></th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="check-box item-check" />
+                    </td>
+                    <td class="task-name">Tech requirements.pdf</td>
+                    <td>Jan 4, 2024</td>
+                    <td>Rajesh</td>
+                    <td>Pending</td>
+                    <td class="dots">⋮</td>
+                  </tr>
+                  <tr class="task__view--detail">
+                    <td colspan="6">
+                      <div class="task-detail-wrapper">
+                        <div class="desc">
+                          This redesign proposal aims to enhance the user
+                          experience, reflect Infoware Technologies' commitment
+                          to digital innovation
+                        </div>
+                        <div class="custom-file-wrapper">
+                          <input type="file" id="file-upload" hidden>
+                          <label for="file-upload" class="custom-file-label">
+                            <img src="../../asset/image/Icon-Download.png" alt="Download Icon" />
+                            <span>Tech Requirement 01.pdf</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="check-box item-check" />
+                    </td>
+                    <td>Dashboard screenshot.jpg</td>
+                    <td>Jan 4, 2024</td>
+                    <td>Suria</td>
+                    <td>Pending</td>
+                    <td class="dots">⋮</td>
+                  </tr>
+                  <tr class="task__view--detail">
+                    <td colspan="6">
+                      <div class="task-detail-wrapper">
+                        <div class="desc">
+                          This redesign proposal aims to enhance the user
+                          experience, reflect Infoware Technologies' commitment
+                          to digital innovation
+                        </div>
+                        <div class="custom-file-wrapper">
+                          <input type="file" id="file-upload" hidden>
+                          <label for="file-upload" class="custom-file-label">
+                            <img src="../../asset/image/Icon-Download.png" alt="Download Icon" />
+                            <span>Tech Requirement 01.pdf</span>
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="check-box item-check" />
+                    </td>
+                    <td>Dashboard prototye recording.mp4</td>
+                    <td>Jan 4, 2024</td>
+                    <td>Kiran</td>
+                    <td>Pending</td>
+                    <td class="dots">⋮</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="check-box item-check" />
+                    </td>
+                    <td>Dashboard prototye FINAL.fig</td>
+                    <td>Jan 4, 2024</td>
+                    <td>Anjalika</td>
+                    <td>Pending</td>
+                    <td class="dots">⋮</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="check-box item-check" />
+                    </td>
+                    <td>Dashboard interaction.framerx</td>
+                    <td>Jan 4, 2024</td>
+                    <td>Ravi</td>
+                    <td>Pending</td>
+                    <td class="dots">⋮</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="check-box item-check" />
+                    </td>
+                    <td>App inspiration.png</td>
+                    <td>Jan 4, 2024</td>
+                    <td>Anjalita</td>
+                    <td>Pending</td>
+                    <td class="dots">⋮</td>
+                  </tr>
+                </tbody>
+              </table>
+              <input type="submit" class="submit" value="Approval" />
+              <input style="background-color: red;" type="submit" class="submit" value="Send to Rework" />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../../asset/js/script.js"></script>
+  </body>
+</html>

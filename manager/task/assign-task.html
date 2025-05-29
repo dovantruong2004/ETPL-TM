@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../asset/css/reset.css" />
+    <link rel="stylesheet" href="../../asset/css/main.css" />
+    <link rel="stylesheet" href="../../asset/fonts/Poppins/stylesheet.css" />
+    <title>ETPL-TM</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Side bar -->
+      <aside class="sidebar">
+        <div class="sidebar_logo">
+          <img src="../../asset/image/Logomark.svg" alt="Logo" />
+          <p class="sidebar_logo--brand">ETPL-TM</p>
+        </div>
+        <nav class="sidebar__nav">
+          <ul>
+            <li>
+              <div>
+                <img src="../../asset/image/category-2.svg" alt="" />
+                <a href="../index.html">Overview</a>
+              </div>
+            </li>
+            <li>
+              <div class="sidebar__nav--active">
+                <img src="../../asset/image/book.svg" alt="" />
+                <a href="task/all-task.html">Task</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="../../asset/image/user-octagon.svg" alt="" />
+                <a href="task/all-task.html">Your team</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="../../asset/image/message.svg" alt="" />
+                <a href="task/all-task.html">Message</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src="../../asset/image/setting-2.svg" alt="" />
+                <a href="task/all-task.html">Setting</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      
+      <main class="main">
+        <!-- Header -->
+        <header class="header">
+          <div class="header__left">
+            <div class="header__left--top">
+              <div class="title">
+                <h1 class="title__username">Do Van Truong</h1>
+                <p class="title__desc">Let's finish task today</p>
+              </div>
+              <div class="information">
+                <div class="information__message">
+                  <img src="../../asset/image/notif.svg" alt="notify" />
+                </div>
+                <div class="information__avatar">
+                  <img src="../../asset/image/Avatar.png" alt="avatar" />
+                </div>
+              </div>
+            </div>
+            <div class="header__left--menu menu">
+              <ul>
+                <li class="menu__item"><a href="#">Approved</a></li>
+                <li class="menu__item"><a href="#">Pending</a></li>
+                <li class="menu__item"><a href="#">Completed</a></li>
+                <li class="menu__item"><a href="#">Assigned Task's</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__calendar">
+            <div class="header__calendar--top">
+              <div class="calendar-nav">&lt;</div>
+              <h3 class="month-year">March 2025</h3>
+              <div class="calendar-nav">&gt;</div>
+            </div>
+            <div class="header__calendar--body">
+              <div class="calendar-weekdays">
+                <span>S</span><span>M</span><span>T</span><span>W</span
+                ><span>T</span><span>F</span><span>S</span>
+              </div>
+              <div class="calendar-days"></div>
+            </div>
+          </div>
+        </header>
+        <section class="task">
+          <div class="">
+            <div class="task__header">
+              <div class="search-task">
+                <input type="search" name="" id="" placeholder="Search task" />
+              </div>
+              <div class="action-task">
+                <div class="progress-approved">Completed</div>
+                <div class="status-pending">Pending</div>
+              </div>
+            </div>
+            <div class="form-create">
+              <div class="form-create-header">
+                <h3>Assign Task</h3>
+              </div>
+              <div class="form-create-container">
+                <div class="form-create-container__main">
+                  <div>
+                    <div>
+                      <label for="">Project name</label>
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        class="tech-required"
+                        placeholder="Tech requirements"
+                      />
+                    </div>
+                    <textarea
+                      name=""
+                      id=""
+                      placeholder="Enter a discription..."
+                    ></textarea>
+                    <div>
+                      <label for="" class="project-name-lable"
+                        >Project deadline</label
+                      >
+                      <input
+                        type="date"
+                        name=""
+                        id=""
+                        class="project-deadline"
+                      />
+                    </div>
+                    <select name="" id="">
+                      <option>Select Employee</option>
+                    </select>
+                  </div>
+                  <div class="upload-container">
+                    <img src="../../asset/image/Illustration.png" alt="" />
+                    <p><strong>Start by uploading a file</strong></p>
+                    <p>
+                      Any assets used in projects will live here. Start
+                      creatingby uploading your files.
+                    </p>
+                    <input type="file" id="fileUpload" class="btn-upload" />
+                    <label for="fileUpload" class="upload-label"
+                      >Upload File</label
+                    >
+                  </div>
+                </div>
+                <button class="btn btn-create">Assign task</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+      </main>
+    </div>
+    <script>
+      function handleClick(element, contentId) {
+        // Xóa class "active" khỏi tất cả các thẻ li trong menu
+        document.querySelectorAll(".side-bar .menu ul li").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // Thêm class "active" vào thẻ li chứa phần tử được click
+        element.parentElement.classList.add("active");
+
+        // Gọi hàm hiển thị nội dung
+        showContent(contentId);
+      }
+
+      function showContent(id) {
+        // Ẩn tất cả nội dung
+        document.querySelectorAll(".content").forEach((div) => {
+          div.classList.remove("active");
+        });
+
+        // Hiển thị nội dung được chọn
+        document.getElementById(id).classList.add("active");
+      }
+    </script>
+    <script src="../../asset/js/script.js"></script>
+  </body>
+</html>
